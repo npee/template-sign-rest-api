@@ -48,7 +48,7 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
 
     @Override
     public void configure(WebSecurity web) throws Exception {
-        web.ignoring().antMatchers("/", "/v2/api-docs", "/swagger-resources/**",
+        web.ignoring().antMatchers("/v2/api-docs", "/swagger-resources/**",
                 "/swagger-ui.html", "/webjars/**", "/swagger/**");
     }
 
@@ -56,12 +56,15 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
     protected void configure(HttpSecurity http) throws Exception {
         http.httpBasic().disable()
             .csrf().disable()
-            .sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS)
-            .and().authorizeRequests()
+            //.sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS)
+            //.and()
+                .antMatcher("/**").authorizeRequests()
                 .antMatchers("/", "/*/signin/**", "/*/signup/**", "/login/**").permitAll()
                 .anyRequest().authenticated()
-            .and().exceptionHandling().authenticationEntryPoint(new LoginUrlAuthenticationEntryPoint("/"))
-            .and().addFilterBefore(ssoFilter(), BasicAuthenticationFilter.class);
+            .and()
+                .exceptionHandling().authenticationEntryPoint(new LoginUrlAuthenticationEntryPoint("/"))
+            .and()
+                .addFilterBefore(ssoFilter(), BasicAuthenticationFilter.class);
 
         http.logout()
                 .invalidateHttpSession(true)

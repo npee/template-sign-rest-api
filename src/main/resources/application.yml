@@ -7,6 +7,14 @@ server:
     key-ailas: bns-ssl
   port: 8443
 
+logging:
+  level:
+    org.springframework.security: DEBUG
+    org:
+      hibernate:
+        type: trace
+    com.npee.oauth2.sign: DEBUG
+
 # port: 8080
 spring:
   freemarker:
