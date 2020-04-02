@@ -57,4 +57,8 @@ dependencies {
 
     implementation 'com.google.code.gson:gson'
 
+    compile group: 'org.springframework.security.oauth', name: 'spring-security-oauth2', version: '2.4.0.RELEASE'
+    compile group: 'org.springframework.security.oauth.boot', name: 'spring-security-oauth2-autoconfigure', version: '2.2.6.RELEASE'
+
+
 }
