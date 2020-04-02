@@ -42,7 +42,7 @@ dependencies {
     */
 
     compile group: 'org.webjars', name: 'jquery', version: '1.12.4'
-    compile('pl.allegro.tech.boot:handlebars-spring-boot-starter:0.3.0')
+    // compile('pl.allegro.tech.boot:handlebars-spring-boot-starter:0.3.0')
 
     runtime('com.h2database:h2')
     runtimeOnly('mysql:mysql-connector-java')
@@ -57,8 +57,8 @@ dependencies {
 
     implementation 'com.google.code.gson:gson'
 
-    compile group: 'org.springframework.security.oauth', name: 'spring-security-oauth2', version: '2.4.0.RELEASE'
-    compile group: 'org.springframework.security.oauth.boot', name: 'spring-security-oauth2-autoconfigure', version: '2.2.6.RELEASE'
+    compile group: 'org.springframework.security.oauth', name: 'spring-security-oauth2', version: '2.3.3.RELEASE'
+    compile group: 'org.springframework.security.oauth.boot', name: 'spring-security-oauth2-autoconfigure', version: '2.0.0.RELEASE'
 
 
 }
