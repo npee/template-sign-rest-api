@@ -70,7 +70,7 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
                 .invalidateHttpSession(true)
                 .clearAuthentication(true)
                 .logoutRequestMatcher(new AntPathRequestMatcher("/logout"))
-                .logoutSuccessUrl("/logout/success")
+                .logoutSuccessUrl("/")
                 .permitAll();
     }
 
@@ -92,6 +92,12 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
     }
 
     @Bean
+    @ConfigurationProperties("google")
+    public ClientResources google() {
+        return new ClientResources();
+    }
+
+    @Bean
     public FilterRegistrationBean oauthClientFilterRegistration(OAuth2ClientContextFilter filter) {
         FilterRegistrationBean registration = new FilterRegistrationBean();
         registration.setFilter(filter);
@@ -103,6 +109,7 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
         CompositeFilter filter = new CompositeFilter();
         List<Filter> filters = new ArrayList<>();
         filters.add(ssoFilter(facebook(), "/login/facebook"));
+        filters.add(ssoFilter(google(), "/login/google"));
         filter.setFilters(filters);
         return filter;
     }

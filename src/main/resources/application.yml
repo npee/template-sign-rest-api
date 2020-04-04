@@ -46,3 +46,16 @@ facebook:
     clientAuthenticationScheme: form
   resource:
     userInfoUri: https://graph.facebook.com/me
+
+google :
+  client :
+    clientId : 186662393735-rlf77qenvp5d8kcr6m1j4frfqhn45036.apps.googleusercontent.com
+    clientSecret: 91yZdANb2kl9ntD6MSJTCQMa
+    accessTokenUri: https://www.googleapis.com/oauth2/v4/token
+    userAuthorizationUri: https://accounts.google.com/o/oauth2/v2/auth
+    clientAuthenticationScheme: form
+    scope:
+      - email
+      - profile
+  resource:
+    userInfoUri: https://www.googleapis.com/oauth2/v3/userinfo
