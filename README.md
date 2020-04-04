@@ -57,10 +57,11 @@ server:
 ```$xslt
 https://localhost:8443
 ```
-## Step 01 - Table 확장, Facebook 로그인
-### OAuth를 이용한 로그인에 일반회원 로그인 기능을 녹여낼 수 있어야 한다
-## 01-1 Facebook 로그인 화면 연동
-## Step 02 - Google 로그인
-## Step 03 - Kakao 로그인
-## Step 04 - Naver 로그인
-## Step 05 - Github 로그인
+## Step 01 - Facebook, google 로그인
+### 01-1 Facebook 로그인 화면 연동
+### 01-2 - Google 로그인
+## Step 02 - Kakao, naver 로그인
+### 02-1 - Kakao 로그인
+### 02-2 - Naver 로그인
+## Step 03 - Github 로그인
+## OAuth를 이용한 로그인에 일반회원 로그인 기능을 녹여낼 수 있어야 한다
