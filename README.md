@@ -61,6 +61,7 @@ https://localhost:8443
 ### 01-1 Facebook 로그인 화면 연동
 ### 01-2 - Google 로그인
 ## Step 02 - Kakao, naver 로그인
+Kakao, Naver CommonOAuth2Provider에서 정보를 따로 제공하지 않으므로 커스터마이징해서 사용해야 한다.
 ### 02-1 - Kakao 로그인
 ### 02-2 - Naver 로그인
 ## Step 03 - Github 로그인
