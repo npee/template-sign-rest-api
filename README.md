@@ -59,6 +59,12 @@ https://localhost:8443
 ```
 ## Step 01 - Facebook, google 로그인
 ### 01-1 Facebook 로그인 화면 연동
+- {baseUrl}/login/facebook
+
+자동 로그인이 설정되어 있으면 로그인 창이 뜨지 않을 수도 있다.
+첫 인증 시에는 개인정보 제공 동의를 해 주어야 한다.
+![image](https://user-images.githubusercontent.com/56008955/78557973-c4a1b100-784c-11ea-8225-6a8878d51a57.png)
+
 ### 01-2 - Google 로그인
 ## Step 02 - Kakao, naver 로그인
 Kakao, Naver CommonOAuth2Provider에서 정보를 따로 제공하지 않으므로 커스터마이징해서 사용해야 한다.
