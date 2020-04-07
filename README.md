@@ -66,6 +66,11 @@ https://localhost:8443
 ![image](https://user-images.githubusercontent.com/56008955/78557973-c4a1b100-784c-11ea-8225-6a8878d51a57.png)
 
 ### 01-2 - Google 로그인
+- {baseUrl}/login/google
+
+로그인 중인 계정이 없다면 계정 선택 창이 뜬다.
+![image](https://user-images.githubusercontent.com/56008955/78679838-af4c8580-7925-11ea-9a6a-2620d65ee83d.png)
+
 ## Step 02 - Kakao, naver 로그인
 Kakao, Naver CommonOAuth2Provider에서 정보를 따로 제공하지 않으므로 커스터마이징해서 사용해야 한다.
 ### 02-1 - Kakao 로그인
