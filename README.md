@@ -72,8 +72,11 @@ https://localhost:8443
 ![image](https://user-images.githubusercontent.com/56008955/78679838-af4c8580-7925-11ea-9a6a-2620d65ee83d.png)
 
 ## Step 02 - Kakao, naver 로그인
-Kakao, Naver CommonOAuth2Provider에서 정보를 따로 제공하지 않으므로 커스터마이징해서 사용해야 한다.
+Kakao와 Naver는 `CommonOAuth2Provider`에서 정보를 따로 제공하지 않으므로 커스터마이징해서 사용해야 한다.
 ### 02-1 - Kakao 로그인
+Kakao의 경우 `CommonOAuth2Provider`를 상속받은 `CustomOAuth2Provider`를 만든다.
 ### 02-2 - Naver 로그인
+Naver의 경우에도 Kakao처럼 `CustomOauth2Provider`를 만든다.
+Naver는 특정 정보가 응답바디의 `response` 객체로 한번 더 감싸져있으므로 `DefaultOAuth2UserService`를 커스터마이징해서 사용해야 한다. 이 클래스를 상속받은 `CustomOAuth2UserService`를 만든다
 ## Step 03 - Github 로그인
 ## OAuth를 이용한 로그인에 일반회원 로그인 기능을 녹여낼 수 있어야 한다
